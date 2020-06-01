@@ -6,6 +6,7 @@ class Navbar extends Component {
   state = {
     navOpen: false, 
     navCSS: 'collapse navbar-collapse', 
+    navColorCSS: 'navbar-dark', 
     links: [
       {
         id: 1, 
@@ -25,17 +26,31 @@ class Navbar extends Component {
     ]
   }
 
+  componentDidMount () {
+    window.addEventListener('scroll', this.setNavColor)
+  }
+
+  componentWillUnount() {
+    window.removeEventListener('scroll', this.setNavColor)
+  }
+
+  setNavColor = () => {
+    window.scrollY > 70 
+      ? this.setState({navColorCSS: 'navbar-light bg-light'})
+      : this.setState({ navColorCSS: 'navbar-dark' })
+  }
+
   navbarHandler = () => {
-    const {navOpen, navCSS} = this.state
+    const { navOpen } = this.state
     navOpen 
       ? this.setState({ navOpen: false, navCSS: 'collapse navbar-collapse' }) 
       : this.setState({ navOpen: true, navCSS: 'collapse navbar-collapse show' })
   }
 
   render() {
-    console.log(this.state.navCSS)
+    const { navCSS, navColorCSS } = this.state
     return (
-      <nav className="navbar navbar-expand-lg navbar-light px-5 py-4 fixed-top">
+      <nav className={`navbar navbar-expand-lg ${navColorCSS} px-4 py-2 fixed-top`}>
        
         <Link className="navbar-brand font-weight-bold pl-2" to="/">
           <img src={logo} alt="Cenex Consulting logo" style={{height: '60px'}}/>
@@ -46,7 +61,7 @@ class Navbar extends Component {
         </button>
 
         {/* Everything in this div collapses at smaller screens  */}
-        <div className={this.state.navCSS}>
+        <div className={navCSS}>
 
           <ul className="navbar-nav mx-auto">
             {this.state.links.map(item => (

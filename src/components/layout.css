@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
 :root {
   --linearGradient: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  --mainGrey: rgb(132,137,145);
 }
 
 body {
@@ -9,5 +10,74 @@ body {
 
 p {
   line-height: 1.8rem;
-  color: rgba(132,137,145,1);  
+  color: var(--mainGrey);  
+}
+
+.background {
+  /* position: relative;  */
+  width: 100%;
+  background : linear-gradient( 45deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 100%  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.background--default {
+  height: 70vh; 
+}
+
+.background--main {
+  height: 90vh; 
+}
+
+/**************   Features Section ******************/
+.Features__card {
+  background: rgba(242,243,245,1);
+}
+
+.Features__card:hover {
+  background: linear-gradient(45deg, rgba(59,189,252,1) 0%, rgba(22,121,230,1) 100%);
+}
+
+.Features__card:hover .Features__content{
+  transform: translate(0, -20%); 
+  transition: all 0.6s;
+}
+
+.Features__card:hover h5 {
+  color: white; 
+}
+
+.Features__card:hover p {
+  color: white; 
+}
+
+.Features__card:hover svg {
+  visibility: hidden; 
+}
+
+/**************   Companies Section ******************/
+.Companies {
+  background-color: rgba(250,251,253,1);
+}
+
+/**************  Footer Section ******************/
+.Footer {
+  background-color: #222222;
+}
+
+.Footer p {
+ font-size: 0.9rem;
+}
+
+.Footer button {
+  font-family: 'Lato', sans-serif;
+}
+
+/**************  Copyright Section ******************/
+.Copyright {
+  background-color: rgba(26,26,26,1);
+}
+
+.Copyright p {
+  font-size: 0.9rem;
 }
