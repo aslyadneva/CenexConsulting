@@ -37,18 +37,13 @@ const Footer = () => {
             </div>
 
           </div>
-
         </div>
-
-
       </footer>
 
       {/* <!-- Copyright Section --> */}
       <section id="copyright" className="Copyright py-4">
         <div className="container">
-
-          <p className="m-0">Copyright &copy; 2020, Cenex Consulting, All Rights Reserved</p>
-
+          <p className="m-0">Copyright &copy; {new Date().getFullYear()}, Cenex Consulting. All Rights Reserved</p>
         </div>
       </section>
     </Fragment>

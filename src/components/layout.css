@@ -101,7 +101,9 @@ p {
 
 
 /**************  FAQ Section ******************/
-
+.FAQ__card {
+  cursor: pointer;
+}
 
 
 /**************  Footer Section ******************/

@@ -1,8 +1,31 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import Layout from '../components/layout'
 import BackgroundSection from '../components/globals/BackgroundSection'
 import SEO from '../components/seo'
+import java from '../images/database.jpg'
+import ui from '../images/wireframe.jpg'
+import app from '../images/smartphone.jpg'
+import support from '../images/people.jpg'
+
+const services = [
+  {
+    title: "Java Consulting", 
+    img: java, 
+  }, 
+  {
+    title: "UI/UX Consulting",
+    img: ui
+  }, 
+  {
+    title: "App Development",
+    img: app
+  }, 
+  {
+    title: "Support",
+    img: support
+  }
+]
 
 const ServicesPage = ({data}) => {
   return (
@@ -23,93 +46,45 @@ const ServicesPage = ({data}) => {
 
       {/* <!-- Services Content --> */}
       <section id="services-content">
+        {services.map((service, idx) => {
+          return (
+            <div class="container-fluid">
+              <div class="row java-consulting">
 
-        {/* <!-- Java Consulting --> */}
-    <div class="container-fluid">
-          <div class="row java-consulting">
-            <div class="col col-12 col-md-8 col-xl-6">
-              <div class="container-sm container-lg">
-                <div class="p-3 m-3 p-md-5 m-md-5">
-                  <h3 class="font-weight-bold py-3 py-md-3">Java Consulting</h3>
-                  <p class="">With the “write once, run anywhere” mantra of Java, the popular programming language isn’t slowing and neither are we.
-              <br/>
-                      <br/>
-                        Our Java consulting practice continues to grow as do our customers. From custom development of Java applications to auditing and troubleshooting to mentoring and staff augmentation.
-            </p>
-                      <a href="#">Learn More</a>
-          </div>
-         </div>
-                </div>
-                <div class="col d-none d-md-block col-md-4 col-xl-6 bg-dark java-image"></div>
-              </div>
-            </div>
-
-            {/* <!-- Web Consulting --> */}
-    <div class="container-fluid">
-              <div class="row web-consulting">
-
-                <div class="col d-none d-md-block col-md-4 col-xl-6 bg-dark web-image"></div>
-
+                {idx % 2 !== 0 &&
+                  <div class="col d-none d-md-block col-md-4 col-xl-6 bg-dark px-0">
+                    <img src={service.img} alt={service.title} style={{ height: '100%', width: '100%', objectFit: 'cover' }} />
+                  </div>
+                }
+                
                 <div class="col col-12 col-md-8 col-xl-6">
                   <div class="container-sm container-lg">
                     <div class="p-3 m-3 p-md-5 m-md-5">
-                      <h3 class="font-weight-bold py-3 py-md-3">UI/UX Consulting</h3>
-                      <p class="">With the “write once, run anywhere” mantra of Java, the popular programming language isn’t slowing and neither are we.
-              <br/>
-                          <br/>
-                            Our Java consulting practice continues to grow as do our customers. From custom development of Java applications to auditing and troubleshooting to mentoring and staff augmentation.
-            </p>
-                          <a href="#">Learn More</a>
-          </div>
-         </div>
+                      <h3 class="font-weight-bold py-3 py-md-3">{service.title}</h3>
+                      <p>
+                        With the “write once, run anywhere” mantra of Java, the popular programming language isn’t slowing and neither are we.
+                        <br />
+                        <br />
+                        Our Java consulting practice continues to grow as do our customers. From custom development of Java applications to auditing and troubleshooting to mentoring and staff augmentation.
+                      </p>
+                      <Link to="/contact" >Learn More</Link>
                     </div>
                   </div>
                 </div>
 
-                {/* <!-- App Development --> */}
-    <div class="container-fluid">
-                  <div class="row app-development">
-                    <div class="col col-12 col-md-8 col-xl-6">
-                      <div class="container-sm container-lg">
-                        <div class="p-3 m-3 p-md-5 m-md-5">
-                          <h3 class="font-weight-bold py-3 py-md-3">App Development</h3>
-                          <p class="">With the “write once, run anywhere” mantra of Java, the popular programming language isn’t slowing and neither are we.
-              <br/>
-                              <br/>
-                                Our Java consulting practice continues to grow as do our customers. From custom development of Java applications to auditing and troubleshooting to mentoring and staff augmentation.
-            </p>
-                              <a href="#">Learn More</a>
-          </div>
-         </div>
-                        </div>
-                        <div class="col d-none d-md-block col-md-4 col-xl-6 bg-dark app-image"></div>
-                      </div>
-                    </div>
-
-                    {/* <!-- Support --> */}
-    <div class="container-fluid">
-                      <div class="row support">
-                        <div class="col d-none d-md-block col-md-4 col-xl-6 bg-dark people-image"></div>
-                        <div class="col col-12 col-md-8 col-xl-6">
-                          <div class="container-sm container-lg">
-                            <div class="p-3 m-3 p-md-5 m-md-5">
-                              <h3 class="font-weight-bold py-3 py-md-3">Support</h3>
-                              <p class="">With the “write once, run anywhere” mantra of Java, the popular programming language isn’t slowing and neither are we.
-              <br/>
-                                  <br/>
-                                    Our Java consulting practice continues to grow as do our customers. From custom development of Java applications to auditing and troubleshooting to mentoring and staff augmentation.
-            </p>
-                                  <a href="#">Learn More</a>
-          </div>
-         </div>
-                            </div>
-                          </div>
-                        </div>
-  
-
-  </section>
-    </Layout>
-    
+                {idx === 0 || idx % 2 === 0 ?
+                  <div class="col d-none d-md-block col-md-4 col-xl-6 bg-dark px-0">
+                    <img src={service.img} alt={service.title} style={{ height: '100%', width: '100%', objectFit: 'cover' }} />
+                  </div>
+                  : null
+                }
+                
+              </div>
+            </div>
+          )
+        })}     
+      </section>
+    </Layout>   
   )
 }
 

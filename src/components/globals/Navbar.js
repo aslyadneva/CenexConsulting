@@ -73,7 +73,7 @@ class Navbar extends Component {
             ))}
           </ul>
 
-          <Link to="/contact" className="btn btn-outline-primary">CONTACT US</Link>
+          <Link to="/contact" className="btn btn-primary">CONTACT US</Link>
         </div>
       </nav>
     )

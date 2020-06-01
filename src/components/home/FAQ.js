@@ -68,7 +68,7 @@ class FAQ extends Component {
                   return (
                     <div className="card my-3" key={item.id}>
                       <div 
-                        className="main-card card-body d-flex justify-content-between align-items-center" 
+                        className="main-card card-body d-flex justify-content-between align-items-center FAQ__card" 
                         onClick={() => this.toggleTab(item.id)}
                       >
                         <span>{item.heading}</span>
@@ -94,11 +94,11 @@ class FAQ extends Component {
             {/* <!-- Column 2 --> */}
             <div className="col-12 col-sm-6 px-4">
               {tabs.map((item, idx) => {
-                if (idx > 2) {
+                if (idx > 2) { 
                   return (
                     <div className="card my-3" key={item.id}>
                       <div 
-                        className="main-card card-body d-flex justify-content-between align-items-center"
+                        className="main-card card-body d-flex justify-content-between align-items-center FAQ__card"
                         onClick={() => this.toggleTab(item.id)}
                       >
                         <span>{item.heading}</span>
