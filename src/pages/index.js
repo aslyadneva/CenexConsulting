@@ -18,7 +18,7 @@ const IndexPage = ({data}) => {
         title="Cenex Consulting"
         backgroundType="main"
       >
-        <div className="video-section-header" >
+        <div className="container my-auto">
           <h1 className="text-light pt-5 font-weight-bold" style={{fontSize: '4.5rem'}}>
             The future of <br/> innovation is now
           </h1>

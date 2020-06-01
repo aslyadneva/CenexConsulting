@@ -1,8 +1,10 @@
 import React from 'react'
+import { FaLightbulb, FaFlask, FaPlane } from 'react-icons/fa'
+import { Link } from 'gatsby'
 
 const Process = () => {
   return (
-    <section id = "process" className="py-5" >
+    <section is="process" className="Process py-5" >
       <div class="container py-5">
 
         {/* <!-- Title Row --> */}
@@ -18,25 +20,25 @@ const Process = () => {
 
           <div class="col px-5">
             <div class="d-flex justify-content-center my-4">
-              <i class="far fa-lightbulb text-primary fa-2x"></i>
+              <FaLightbulb class="far fa-lightbulb text-primary fa-2x" style={{ fontSize: '2rem' }}/>
             </div>
             <h5 class="text-center">Ideate</h5>
             <p class="text-center">Wireframing has its pros and cons as it is a crucial part of the design stage.</p>
-            <div class="separator"></div>
+            <div className="Process__separator"></div>
           </div>
 
           <div class="col px-5">
             <div class="d-flex justify-content-center my-4">
-              <i class="fas fa-flask text-primary fa-2x"></i>
+              <FaFlask class="fas fa-flask text-primary fa-2x" style={{ fontSize: '2rem' }}/>
             </div>
             <h5 class="text-center">Create</h5>
             <p class="text-center">Wireframing has its pros and cons as it is a crucial part of the design stage.</p>
-            <div class="separator "></div>
+            <div className="Process__separator"></div>
           </div>
 
           <div class="col px-5">
             <div class="d-flex justify-content-center my-4">
-              <i class="fas fa-plane text-primary fa-2x"></i>
+              <FaPlane class="fas fa-plane text-primary fa-2x" style={{ fontSize: '2rem' }}/>
             </div>
             <h5 class="text-center">Deploy</h5>
             <p class="text-center">Wireframing has its pros and cons as it is a crucial part of the design stage.</p>
@@ -46,7 +48,7 @@ const Process = () => {
 
         {/* <!-- Button Row --> */}
         <div class="row d-flex justify-content-center pb-5">
-          <button class="btn btn-primary px-5 py-2">View Projects</button>
+          <Link to="/portfolio" className="btn btn-primary px-5 py-2">View Projects</Link>
         </div>
       </div>
     </section >

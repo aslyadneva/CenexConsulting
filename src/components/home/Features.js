@@ -8,7 +8,7 @@ const Features = () => {
       <div class="container-xl py-5">
 
         <div class="row ">
-
+ 
           <div class="col-12 col-xl-8">
 
             <div class="d-flex flex-column flex-md-row">

@@ -1,15 +1,16 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 const Recognition = () => {
   return (
-    <section id = "recognition" class="py-5" >
+    <section id = "recognition" className="Recognition py-5">
       <div class="container py-5">
         <div class="row d-flex justify-content-between">
 
           <div class="col-12 col-lg-4">
             <h2 class="font-weight-bold">Our Recognition</h2>
             <p>Over 30 high quality professionally designed pre-built website concepts to choose from. Build your website using a fully visual interface, using our revolutionary page & header builder.</p>
-            <p class="text-primary">Contact Us</p>
+            <Link to="/contact" className="text-primary">Contact Us</Link>
           </div>
 
           <div id="counter" class="col-12 col-lg-6 d-flex justify-content-between align-items-center">
