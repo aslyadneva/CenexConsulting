@@ -4,14 +4,14 @@ import { Link } from 'gatsby'
 
 const Process = () => {
   return (
-    <section is="process" className="Process py-5" >
+    <section className="Process" >
       <div class="container py-5">
 
         {/* <!-- Title Row --> */}
         <div class="row">
           <div class="col">
             <p class="text-center">HOW WE WORK</p>
-            <h2 class="text-center font-weight-bold">A Simple Process</h2>
+            <h2 class="text-center Heading">A Simple Process</h2>
           </div>
         </div>
 
@@ -48,7 +48,7 @@ const Process = () => {
 
         {/* <!-- Button Row --> */}
         <div class="row d-flex justify-content-center pb-5">
-          <Link to="/portfolio" className="btn btn-primary px-5 py-2">View Projects</Link>
+          <Link to="/portfolio" className="Button Button--medium">View Projects</Link>
         </div>
       </div>
     </section >

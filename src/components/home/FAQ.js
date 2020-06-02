@@ -54,7 +54,7 @@ class FAQ extends Component {
 
           <div className="row">
             <div className="col">
-              <h2 className="text-center font-weight-bold">FAQ</h2>
+              <h2 className="text-center Heading">FAQ</h2>
               <p className="text-center">Get prompt responses from a friendly, professional and knowledgable support team.</p>
             </div>
           </div>

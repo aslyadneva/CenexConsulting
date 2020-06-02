@@ -61,9 +61,9 @@ const Features = () => {
           </div>
 
           <div class="col-12 col-md-12 col-xl-4 align-self-center p-5 pl-xl-5 features-text">
-            <h3>We can take your business online</h3>
+            <h3 className="Heading">We can take your business online</h3>
             <p class="py-2">Over 30 high quality professionally designed pre-built website concepts to choose from. Build your website using a fully visual interface, using our revolutionary page & header builder.</p>
-            <Link to="/services" class="btn btn-primary px-5 py-2">VIEW MORE</Link>
+            <Link to="/services" class="Button Button--medium">VIEW MORE</Link>
           </div>
 
         </div>

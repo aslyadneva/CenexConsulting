@@ -17,7 +17,7 @@ const ContactPage = ({data}) => {
       >
         <div className="container my-auto">
           <div className="col-6">
-            <h1 className="display-3 text-light font-weight-bold">Contact Us</h1>
+            <h1 className="Title">Contact Us</h1>
           </div>
         </div>
       </BackgroundSection>
@@ -30,7 +30,7 @@ const ContactPage = ({data}) => {
             {/* <!-- Form Column --> */}
             <div class="col-12 col-xl-8">
               <div class="p-5 rounded-lg Contact__container">
-                <h3 class="py-2 display-5 font-weight-bold">Reach out to us</h3>
+                <h3 class="py-2 Heading">Reach out to us</h3>
                 <p>Dont be shy, Just tell us about yourself and we’ll figure out the best option for you and your project.</p>
                 <Form/>
               </div>
@@ -48,7 +48,7 @@ const ContactPage = ({data}) => {
       {/* <!-- Map --> */}
       <section id="contact-map" class="p-5">
         <div class="container">
-          <h3>Visit our office</h3>
+          <h3 className="Heading">Visit our office</h3>
           <p>You don't need an appointment, just walk in.</p>
           MAP GOES HERE
           {/* <div id="map" style='width: auto; height: 30rem;'>

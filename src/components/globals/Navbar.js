@@ -6,7 +6,7 @@ class Navbar extends Component {
   state = {
     navOpen: false, 
     navCSS: 'collapse navbar-collapse', 
-    navColorCSS: 'navbar-dark', 
+    navColorCSS: 'navbar-dark Navbar--dark', 
     links: [
       {
         id: 1, 
@@ -23,6 +23,11 @@ class Navbar extends Component {
         path: '/portfolio',
         text: 'Portfolio'
       }, 
+      {
+        id: 4,
+        path: '/contact',
+        text: 'Contact'
+      }, 
     ]
   }
 
@@ -36,7 +41,7 @@ class Navbar extends Component {
 
   setNavColor = () => {
     window.scrollY > 70 
-      ? this.setState({navColorCSS: 'navbar-light bg-light'})
+      ? this.setState({ navColorCSS: 'navbar-light bg-light Navbar--light'})
       : this.setState({ navColorCSS: 'navbar-dark' })
   }
 
@@ -50,10 +55,10 @@ class Navbar extends Component {
   render() {
     const { navCSS, navColorCSS } = this.state
     return (
-      <nav className={`navbar navbar-expand-lg ${navColorCSS} px-4 py-2 fixed-top`}>
+      <nav className={`navbar navbar-expand-lg ${navColorCSS} fixed-top Navbar`}>
        
         <Link className="navbar-brand font-weight-bold pl-2" to="/">
-          <img src={logo} alt="Cenex Consulting logo" style={{height: '60px'}}/>
+          Cenex
         </Link>
 
         <button className="navbar-toggler" type="button" onClick={this.navbarHandler}>
@@ -73,7 +78,7 @@ class Navbar extends Component {
             ))}
           </ul>
 
-          <Link to="/contact" className="btn btn-primary">CONTACT US</Link>
+          <Link to="/contact" className="Button Button--small">Join Our Team</Link>
         </div>
       </nav>
     )

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/globals/BackgroundSection"
@@ -19,11 +19,20 @@ const IndexPage = ({data}) => {
         backgroundType="main"
       >
         <div className="container my-auto">
-          <h1 className="text-light pt-5 font-weight-bold" style={{fontSize: '4.5rem'}}>
+          <h1 className="Title" data-sal="slide-down" data-sal-duration="1000" data-sal-easing="ease">
             The future of <br/> innovation is now
           </h1>
-          <p className="lead text-light pb-3">The core was draining on energy and destroyed the <br/> entire planet as kal-el was the only survivor.</p>
-          <button className="btn btn-primary py-2 px-4">LEARN MORE</button>  
+          <p className="Lead" data-sal="slide-down" data-sal-duration="1000" data-sal-easing="ease"
+          >
+            The core was draining on energy and destroyed the <br/> entire planet as kal-el was the only survivor.
+          </p>
+          
+            <Link to="/services" className="Button Button--large" data-sal="slide-down" data-sal-duration="1000" data-sal-easing="ease">
+              LEARN MORE
+            </Link>
+           
+         
+          
         </div>
       </BackgroundSection>
 
@@ -38,7 +47,7 @@ const IndexPage = ({data}) => {
 
 export const query = graphql`
   {
-    backgroundImage:file(relativePath:{eq: "projects.jpg"}) {
+    backgroundImage:file(relativePath:{eq: "white-bg.jpg"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

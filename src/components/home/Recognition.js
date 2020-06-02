@@ -8,7 +8,7 @@ const Recognition = () => {
         <div class="row d-flex justify-content-between">
 
           <div class="col-12 col-lg-4">
-            <h2 class="font-weight-bold">Our Recognition</h2>
+            <h2 class="Heading">Our Recognition</h2>
             <p>Over 30 high quality professionally designed pre-built website concepts to choose from. Build your website using a fully visual interface, using our revolutionary page & header builder.</p>
             <Link to="/contact" className="text-primary">Contact Us</Link>
           </div>

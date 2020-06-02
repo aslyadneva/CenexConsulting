@@ -24,14 +24,13 @@ const services = [
   {
     title: "Support",
     img: support
-  }
+  } 
 ]
 
 const ServicesPage = ({data}) => {
   return (
     <Layout>
       <SEO title="Services"/>
-      {/* <!-- Services Header --> */}
       <BackgroundSection
         img={data.backgroundImage.childImageSharp.fluid}
         title="Our Services"
@@ -39,7 +38,7 @@ const ServicesPage = ({data}) => {
       >
         <div class="container my-auto">
           <div class="col-6">
-            <h1 class="display-3 text-light font-weight-bold">Our services</h1>
+            <h1 className="Title">Our services</h1>
           </div>
         </div>
       </BackgroundSection>
@@ -60,7 +59,7 @@ const ServicesPage = ({data}) => {
                 <div class="col col-12 col-md-8 col-xl-6">
                   <div class="container-sm container-lg">
                     <div class="p-3 m-3 p-md-5 m-md-5">
-                      <h3 class="font-weight-bold py-3 py-md-3">{service.title}</h3>
+                      <h3 class="py-3 py-md-3 Heading">{service.title}</h3>
                       <p>
                         With the “write once, run anywhere” mantra of Java, the popular programming language isn’t slowing and neither are we.
                         <br />
