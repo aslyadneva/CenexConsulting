@@ -2,6 +2,7 @@ import React, {Fragment} from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import 'mapbox-gl/dist/mapbox-gl.css'
 import './bootstrap.min.css'
 import './layout.scss'
 import Navbar from "./globals/Navbar"

@@ -48,6 +48,21 @@ class FAQ extends Component {
 
   render () {
     const { tabs, openTabs } = this.state
+
+    const openedStyle = {
+      maxHeight: '100rem', 
+      transition: 'max-height 2s, opacity 2s',
+      opacity: '1', 
+      visibility: 'visible', 
+    }
+    const closedStyle = {
+      maxHeight: '0rem', 
+      height: '0', 
+      visibility: 'hidden', 
+      opacity: '0', 
+      transition: 'max-height 2s', 
+    }
+
     return (
       <section id="faq" className="FAQ py-5" >
         <div className="container py-5">
@@ -64,7 +79,7 @@ class FAQ extends Component {
             {/* <!-- Column 1 --> */}
             <div className="col-12 col-sm-6 px-4">
               {tabs.map((item, idx) => {
-                if (idx < 3) {
+                if (idx < 3) { 
                   return (
                     <div className="card my-3" key={item.id}>
                       <div 
@@ -78,11 +93,16 @@ class FAQ extends Component {
                             : <FaPlus className="collapse-icon fas fa-plus"/>
                         }                 
                       </div>
-                      <div className={`collapse ${openTabs.includes(item.id) ? 'show': ''} shadow`}>
+
+                      <div 
+                        className="shadow"
+                        style={openTabs.includes(item.id) ? openedStyle : closedStyle}
+                      >
                         <div className="card card-body border-0">
                           <p>{item.content}</p>
                         </div>
                       </div>
+
                     </div>
                   )
                 } else {
@@ -108,11 +128,16 @@ class FAQ extends Component {
                             : <FaPlus className="collapse-icon fas fa-plus"/>
                         }    
                       </div>
-                      <div className={`collapse ${openTabs.includes(item.id) ? 'show': ''} shadow`}>
+
+                      <div 
+                        className="shadow"
+                        style={openTabs.includes(item.id) ? openedStyle : closedStyle}
+                      >
                         <div className="card card-body border-0">
                           <p>{item.content}</p>
                         </div>
                       </div>
+
                     </div>
                   )
                 } else {

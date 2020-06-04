@@ -230,8 +230,31 @@ a, a:hover, a:visited {
 
 
 /**************  FAQ Section ******************/
-.FAQ__card {
-  cursor: pointer;
+
+.FAQ {
+  &__card {
+    cursor: pointer; 
+    transition: color .2s ease-out;
+
+    &:hover {
+      color: $mainBlue;
+    }
+  }
+
+  &__collapsingCard {
+    visibility: hidden; 
+    max-height: 0; 
+   
+
+    &--show {
+      visibility: visible; 
+      height: auto; 
+      max-height: 100rem;
+     
+     
+    }
+  }
+
 }
 
 
@@ -286,4 +309,84 @@ a, a:hover, a:visited {
   font-size: 0.9rem;
   font-family: 'Lato', sans-serif; 
   color: rgba(34,34,34,0.31);
+}
+
+.mapContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/************ PORTFOLIO PAGE **************/
+
+.Projects__container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.ProjectTile {
+  height: 15rem;  
+  background-color: grey; 
+  position: relative; 
+  cursor: pointer;
+
+  @media (min-width: 400px) {
+    height: 20rem;      
+  }
+
+  &__image {
+    height: 100%; 
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+      height: 100%;
+      width: 100%;
+      opacity: 0; 
+      color: white; 
+      display: flex; 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__title {
+        transition: all 0.4s ease-out;
+        transform: scale(0.6);
+        opacity: 0; 
+      }
+
+      &__description {
+        position: absolute;
+        bottom: 20px;
+      }
+  }
+
+  &__overlay {
+    position: absolute; 
+    top: 0; 
+    height: 100%; 
+    width: 100%; 
+    transition: all .17s linear;
+
+    &:hover {
+      border: 10px solid $mainBlue; 
+      background-color: rgba(0, 0, 0, .5);
+
+
+      .ProjectTile__content {
+        opacity: 1;
+
+        .ProjectTile__content__title {
+          transform: scale(1);
+          opacity: 1; 
+        }
+      }
+    }
+
+  }
+
+  
+
 }
