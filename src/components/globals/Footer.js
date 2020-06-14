@@ -11,7 +11,9 @@ const Footer = () => {
 
             <div className="col-12 py-3 px-5 col-md-6 col-xl-3 py-xl-0 pl-xl-3 pr-xl-5 ">
               <h5 className="mb-4 text-light">Cenex</h5>
-              <p>Get started swiftly & easily by importing a demo of your choice in a single click. Build your website using a fully visual interface.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero inventore suscipit eius. Doloremque expedita adipisci tenetur.
+              </p>
             </div>
 
             <div className="col-12 py-3 px-5 col-md-6 col-xl-3 py-xl-0 px-xl-5">
@@ -31,9 +33,9 @@ const Footer = () => {
 
             <div className="col-12 py-3 px-5 col-md-6 col-xl-3 py-xl-0 px-xl-5">
               <h5 className="mb-4 text-light">Legal</h5>
-              <a href="#"><p>Services</p></a>
-              <a href="#"><p>Portfolio</p></a>
-              <a href="#"><p>Contact</p></a>
+              <Link to="/services"><p>Services</p></Link>
+              <Link to="/portfolio"><p>Portfolio</p></Link>
+              <Link to="/contact"><p>Contact</p></Link>
             </div>
 
           </div>

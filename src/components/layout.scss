@@ -202,9 +202,11 @@ a, a:hover, a:visited {
 .Companies {
   background-color: rgba(250,251,253,1);
   padding: 7rem 2rem;
+  overflow-x: scroll;
 
   &__image {
     height: 50px; 
+    margin: 20px;
   }
 }
 
@@ -220,7 +222,19 @@ a, a:hover, a:visited {
   background: #d8d8d8;
   transform: translate3d(50%,0,0);
   right: 0;
-}
+
+  @media only screen and (max-width: 767px) {
+     position: relative;
+      transform: none; 
+      top: 0; 
+      left: 0; 
+      height: 100px; 
+      width: 2px; 
+      margin: 0 auto; 
+      right: 0; 
+  }
+
+} 
 
 /**************  Recognition Section ******************/
 .Recognition {

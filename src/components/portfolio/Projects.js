@@ -26,13 +26,13 @@ const projectList = [
   },
   {
     id: 4,
-    image: project2,
+    image: project6,
     title: 'BitHeads',
     type: 'Cloud Web App'
   },
   {
     id: 5,
-    image: project6,
+    image: project2,
     title: 'InnovaPost',
     type: 'Java Web Services'
   },
@@ -53,7 +53,7 @@ const Projects = () => {
         <div className="row">
           <div className="col">
             <h2 className="text-center Heading ">Recent Projects</h2>
-            <p className="text-center">The people who made it happen and will continue to push this company forward for more success</p>
+            <p className="text-center mx-auto" style={{maxWidth: '600px'}}>The people who made it happen and will continue to push this company forward for more success</p>
           </div>
         </div>
 

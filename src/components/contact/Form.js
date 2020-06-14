@@ -36,7 +36,7 @@ class Form extends Component {
               name="name"
               required        
               placeholder="Name"
-              className="form-control p-4 border-0"
+              className="form-control p-4 border-0 mb-3 mb-md-0"
               id="name"
             />
           </div>
